@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Update Simulator</title>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 10px 20px;
+      }
+      #updates {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Location Update Simulator</h1>
+      <form id="locationForm">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" required />
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required />
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude" required />
+        <button type="submit">Send Location Update</button>
+      </form>
+      <div id="updates">
+        <h2>Received Updates:</h2>
+        <ul id="updatesList"></ul>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
